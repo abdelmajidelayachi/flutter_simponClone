@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:simpon_clone/utils/global.colors.dart';
 import 'package:simpon_clone/views/splash.view.dart';
  
 void main() => runApp(const App());
@@ -9,9 +10,12 @@ const App({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
-    return const GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashView()
+    return  GetMaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
+      // debugShowCheckedModeBanner: false,
+      home: const SplashView()
     );
   }
 }

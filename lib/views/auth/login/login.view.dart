@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:simpon_clone/views/login.view.dart';
+import 'package:simpon_clone/utils/global.colors.dart';
+import 'package:simpon_clone/views/auth/register/register.view.dart';
 import 'package:simpon_clone/widgets/button.global.dart';
 import 'package:simpon_clone/widgets/social.login.dart';
 import 'package:simpon_clone/widgets/text.form.global.dart';
 
-import '../utils/global.colors.dart';
-
-class RegisterView extends StatelessWidget {
-RegisterView({ Key? key }) : super(key: key);
-final TextEditingController nameController = TextEditingController(); 
-final TextEditingController emailController = TextEditingController();
-final TextEditingController passwordController = TextEditingController();
-final TextEditingController confirmPasswordController = TextEditingController();
-
+class LoginView extends StatelessWidget {
+  LoginView({Key? key}) : super(key: key);
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +42,7 @@ final TextEditingController confirmPasswordController = TextEditingController();
                   ),
                   const SizedBox(height: 50,),
               Text(
-                "Create Your account",
+                "Login to Your account",
                 style: TextStyle(
                   color: GlobalColors.textColor,
                   fontSize: 16,
@@ -55,15 +51,6 @@ final TextEditingController confirmPasswordController = TextEditingController();
               ),
               const SizedBox(
                 height: 15,
-              ),
-              TextFormGlobal(
-                controller: nameController,
-                text: 'Full name',
-                obscure: false,
-                textInputType: TextInputType.name,
-              ),
-              const SizedBox(
-                height: 10,
               ),
               TextFormGlobal(
                 controller: emailController,
@@ -80,19 +67,10 @@ final TextEditingController confirmPasswordController = TextEditingController();
                 obscure: true,
                 textInputType: TextInputType.text,
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              TextFormGlobal(
-                controller: confirmPasswordController,
-                text: 'Confirm Password',
-                obscure: true,
-                textInputType: TextInputType.text,
-              ),
-              const SizedBox(height: 20),
-              const ButtonGlobal(text: 'Register',),
-              const SizedBox(height: 40),
-              const SocialLogin(text: 'Sign Up'),
+              const SizedBox(height: 30),
+              const ButtonGlobal(text: 'Sign In'),
+              const SizedBox(height: 80),
+              const SocialLogin(text: 'Sign In',),
             ]),
           ),
         ),
@@ -105,15 +83,14 @@ final TextEditingController confirmPasswordController = TextEditingController();
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'I already have an account ',
+              'Don\'t have an account ',
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginView()));
-                
-              },
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterView()));
+              } ,
               child: Text(
-                'Sign In',
+                'Sign Up',
                 style: TextStyle(color: GlobalColors.mainColor),
               ),
             )
