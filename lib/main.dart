@@ -1,10 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:simpon_clone/firebase_options.dart';
 import 'package:simpon_clone/splash.view.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:simpon_clone/src/repository/auth_repository/authentication_repository.dart';
 
 Future<void> main() async {

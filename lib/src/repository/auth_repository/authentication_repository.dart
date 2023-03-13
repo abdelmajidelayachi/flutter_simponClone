@@ -20,7 +20,7 @@ class AuthenticationRepository extends GetxController {
   }
 
   _setInitialScreen(User? user) {
-    user == null ? Get.offAll(()=>const ClassroomView()): Get.offAll(() =>  LoginView());
+    user != null ? Get.to(()=>const ClassroomView()): Get.offAll(() =>  LoginView());
   }
 
   Future<void> createUserWithEmailAndPassword(String email, String password) async {
