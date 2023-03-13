@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simpon_clone/utils/global.colors.dart';
-import 'package:simpon_clone/widgets/components/Bottom.nav.component.dart';
+import 'package:simpon_clone/src/common_widgets/Bottom.nav.component.dart';
 
 class ClassroomView extends StatefulWidget {
   const ClassroomView({super.key});

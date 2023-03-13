@@ -15,8 +15,7 @@ class BottomNavComponent extends StatelessWidget {
         BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.white)
-            ,
+            backgroundColor: Colors.white),
         BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.chalkboardUser, size: 20),
             label: 'Classroom',

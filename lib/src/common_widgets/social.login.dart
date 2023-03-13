@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:simpon_clone/utils/global.colors.dart';
+import 'package:simpon_clone/src/constants/global.colors.dart';
 
 class SocialLogin extends StatelessWidget {
   const SocialLogin({Key? key, required this.text}) : super(key: key);

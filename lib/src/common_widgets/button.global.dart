@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:simpon_clone/utils/global.colors.dart';
+import 'package:simpon_clone/src/constants/global.colors.dart';
 
 class ButtonGlobal extends StatelessWidget {
-  const ButtonGlobal({Key? key, required this.text}) : super(key: key);
+  const ButtonGlobal({Key? key, required this.text, required this.press}) : super(key: key);
   final String text;
+  final VoidCallback? press;
 
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-          print("Login");
-      } ,
+      onTap: press,
       child: Container(
         alignment: Alignment.center,
         height: 55,
