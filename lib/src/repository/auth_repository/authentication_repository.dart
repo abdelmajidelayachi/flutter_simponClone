@@ -1,6 +1,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:simpon_clone/src/features/authentication/screens/login.view.dart';
 import 'package:simpon_clone/src/features/authentication/screens/register.view.dart';
 import 'package:simpon_clone/src/features/classroom/screens/classroom.view.dart';
@@ -14,14 +15,12 @@ class AuthenticationRepository extends GetxController {
 
   @override
   void onReady() {
+    super.onReady();
     firebaseUser = Rx<User?>(_auth.currentUser);
     firebaseUser.bindStream(_auth.userChanges());
-    ever(firebaseUser, _setInitialScreen);
+    print("Firebase user: ${firebaseUser.value?.email}");
   }
 
-  _setInitialScreen(User? user) {
-    user != null ? Get.to(()=>const ClassroomView()): Get.offAll(() =>  LoginView());
-  }
 
   Future<void> createUserWithEmailAndPassword(String email, String password) async {
     try{
@@ -42,22 +41,27 @@ class AuthenticationRepository extends GetxController {
 
   
   Future<void> loginUserWithEmailAndPassword(String email, String password) async {
+    print("Login user: $email");
+    print("Login password: $password");
     try{
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       firebaseUser.value != null ? Get.offAll(()=>const ClassroomView()): Get.offAll(() =>  LoginView());
     } on FirebaseAuthException catch(e) {
-      final ex = RegisterWithEmailAndPasswordFailure.code(e.code);
-      print('Firebase auth Exception: ${ex.message}');
-      throw ex;
-      
+      print('Firebase auth Exception: 1');
     } catch(_) {
-      const ex = RegisterWithEmailAndPasswordFailure();
-      print('Firebase auth Exception: ${ex.message}');
-      throw ex;
+
+      print('Firebase auth Exception 2');
     }
   }
 
-  Future<void> logout() async => await _auth.signOut();
+  Future<void> logout() async =>{
+    await _auth.signOut(),
+    Get.offAll(() => LoginView())
+  };
+
+  bool isLogin() {
+    return firebaseUser.value != null;
+  }
 
   
 

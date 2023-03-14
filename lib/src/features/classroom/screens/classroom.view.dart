@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simpon_clone/src/common_widgets/Bottom.nav.component.dart';
+import 'package:simpon_clone/src/repository/auth_repository/authentication_repository.dart';
 
 class ClassroomView extends StatefulWidget {
   const ClassroomView({super.key});
+  
 
   @override
   State<ClassroomView> createState() => _ClassroomViewState();
@@ -26,10 +29,19 @@ class _ClassroomViewState extends State<ClassroomView>
 
   @override
   Widget build(BuildContext context) {
+    final AuthenticationRepository authenticationRepository = Get.find();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Simpon'),
-        centerTitle: true,
+       centerTitle: true,
+       actions: [
+         IconButton(
+           onPressed: () {
+            authenticationRepository.logout();
+           },
+           // logout
+           icon: const Icon(Icons.logout),
+         ),],
       ),
       body: const Center(
           child: Text(
