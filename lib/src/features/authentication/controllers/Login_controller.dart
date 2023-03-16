@@ -29,7 +29,7 @@ class LoginController extends GetxController {
       // clear GetStorage
       storage.erase();
       storage.write("user", data);
-      Get.offAllNamed(Routes.CLASSROOM);
+      Get.offAllNamed(Routes.Home);
     }else{
       print('Login Failed');
     }

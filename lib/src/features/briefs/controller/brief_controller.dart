@@ -19,7 +19,7 @@ class BriefController extends GetxController {
   }
 
 
-  getAllBriefs() async {
+  Future<List<BriefModel>> readBriefs() async {
     int promoId = box.read('user')['promo_id'];
     List<BriefModel> briefs = [];
     var res = await http.get(Uri.parse(Url.briefsByPromoId(promoId)));

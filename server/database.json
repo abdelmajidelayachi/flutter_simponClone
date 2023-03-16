@@ -120,9 +120,10 @@
   "briefs":[
     {
       "id":1,
-      "name":"Brief 1",
-      "description":"Description 1",
+      "name":"Build a website with HTML and CSS",
+      "description":"Build marketplace with HTML and CSS and make it responsive for mobile and desktop devices",
       "promo_id":1,
+      "image":"https://static.doofinder.com/main-files/uploads/2019/03/marketplace-e-commerce-1.jpg",
       "created_at":"2018-01-01 00:00:00",
       "updated_at":"2018-01-01 00:00:00"
     },
@@ -130,6 +131,7 @@
       "id":2,
       "name":"Brief 2",
       "description":"Description 2",
+      "image":"https://static.doofinder.com/main-files/uploads/2019/03/marketplace-e-commerce-1.jpg",
       "promo_id":1,
       "created_at":"2018-01-01 00:00:00",
       "updated_at":"2018-01-01 00:00:00"
@@ -138,7 +140,8 @@
       "id":3,
       "name":"Brief 3",
       "description":"Description 3",
-      "promo_id":2,
+      "promo_id":1,
+      "image":"https://static.doofinder.com/main-files/uploads/2019/03/marketplace-e-commerce-1.jpg",
       "created_at":"2018-01-01 00:00:00",
       "updated_at":"2018-01-01 00:00:00"
     },
@@ -146,7 +149,8 @@
       "id":4,
       "name":"Brief 4",
       "description":"Description 4",
-      "promo_id":3,
+      "promo_id":1,
+      "image":"https://static.doofinder.com/main-files/uploads/2019/03/marketplace-e-commerce-1.jpg",
       "created_at":"2018-01-01 00:00:00",
       "updated_at":"2018-01-01 00:00:00"
     },
@@ -154,7 +158,8 @@
       "id":5,
       "name":"Brief 5",
       "description":"Description 5",
-      "promo_id":3,
+      "promo_id":1,
+      "image":"https://static.doofinder.com/main-files/uploads/2019/03/marketplace-e-commerce-1.jpg",
       "created_at":"2018-01-01 00:00:00",
       "updated_at":"2018-01-01 00:00:00"
     }

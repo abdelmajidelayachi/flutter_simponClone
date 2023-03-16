@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class GlobalColors {
 
-  static HexColor mainColor = HexColor('#1E3190');
+  static Color mainColor = Colors.red;
 
   static HexColor textColor = HexColor('#4F4F4F');
    

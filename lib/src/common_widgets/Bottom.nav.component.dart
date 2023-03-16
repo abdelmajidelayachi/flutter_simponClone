@@ -12,29 +12,29 @@ class BottomNavComponent extends StatefulWidget {
   
 
   @override
-  _BottomNavComponentState createState() => _BottomNavComponentState();
+  _BottomNavComponentState createState() => _BottomNavComponentState(currentPage);
 }
 
 class _BottomNavComponentState extends State<BottomNavComponent> {
-  int currentPage = 0;
+  final int currentPage;
+  _BottomNavComponentState(this.currentPage);
  
    void _onItemTapped(int index) {
-    setState(() {
-      currentPage = index;
-    });
+    print("index: $index");
+
     
     switch (index) {
       case 0:
-        Get.offAllNamed("/home");
+        Get.toNamed(Routes.Home);
         break;
       case 1:
-        Get.offAllNamed(Routes.CLASSROOM);
+        Get.toNamed(Routes.CLASSROOM);
         break;
       case 2:
-        Get.offAllNamed(Routes.BRIEFS);
+        Get.toNamed(Routes.BRIEFS);
         break;
       case 3:
-        Get.offAllNamed("/profile");
+        Get.toNamed("/profile");
         break;
     }
   }
@@ -64,6 +64,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
       ],
 
       onTap: _onItemTapped,
+
 
 
     );
