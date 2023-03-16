@@ -47,30 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBZq9UzjbMqNgxXaWtwSLh5RJN2WnZssAs',
-    appId: '1:817802216512:web:137984cda35b06904c0ba5',
-    messagingSenderId: '817802216512',
-    projectId: 'simponclone',
-    authDomain: 'simponclone.firebaseapp.com',
-    storageBucket: 'simponclone.appspot.com',
-    measurementId: 'G-SD829S7E5V',
+    apiKey: 'AIzaSyBXUK_vAq_ZDw_MScFhpQciV3Tp0ysp_MM',
+    appId: '1:200447432684:web:d1807ae639be1bcfb3d2c9',
+    messagingSenderId: '200447432684',
+    projectId: 'simplon-app',
+    authDomain: 'simplon-app.firebaseapp.com',
+    storageBucket: 'simplon-app.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyATmE1G4CGemxr_kGlzwUMNz4rDCfw-950',
-    appId: '1:817802216512:android:4963140c51140b704c0ba5',
-    messagingSenderId: '817802216512',
-    projectId: 'simponclone',
-    storageBucket: 'simponclone.appspot.com',
+    apiKey: 'AIzaSyCoz-0tij4yd3xwc4ETs_ASGR7rr7Il3-Q',
+    appId: '1:200447432684:android:53fa0968026aedf9b3d2c9',
+    messagingSenderId: '200447432684',
+    projectId: 'simplon-app',
+    storageBucket: 'simplon-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCLaf2Qi1thr8a2eIXJEXe8dKEae3BMGS8',
-    appId: '1:817802216512:ios:14f880a9a1d316314c0ba5',
-    messagingSenderId: '817802216512',
-    projectId: 'simponclone',
-    storageBucket: 'simponclone.appspot.com',
-    iosClientId: '817802216512-g922mf6i7bkqllfj0mhti6loseqccob2.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBbxiZSsAaVO7whexd-2j1UuU0zs1MxELw',
+    appId: '1:200447432684:ios:1527aa56f5a69d89b3d2c9',
+    messagingSenderId: '200447432684',
+    projectId: 'simplon-app',
+    storageBucket: 'simplon-app.appspot.com',
+    iosClientId: '200447432684-3cbbv49k6o16sb5nj56qnebqv4p8jpsc.apps.googleusercontent.com',
     iosBundleId: 'com.example.simponClone',
   );
 }

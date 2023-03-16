@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:817802216512:ios:14f880a9a1d316314c0ba5",
-  "FIREBASE_PROJECT_ID": "simponclone",
-  "GCM_SENDER_ID": "817802216512"
+  "GOOGLE_APP_ID": "1:200447432684:ios:1527aa56f5a69d89b3d2c9",
+  "FIREBASE_PROJECT_ID": "simplon-app",
+  "GCM_SENDER_ID": "200447432684"
 }

@@ -1,25 +1,19 @@
-/*
- create user model 
-*/
 
-class UserModel {
-  final int id;
+
+class BriefModel {
+
   final String name;
-  final String email;
-  final String password;
+  final String description;
+  final String image;
   final int promo_id;
-  final String role;
   final String created_at;
   final String updated_at;
 
-
-  const UserModel({
-    required this.id,
+  const BriefModel({
     required this.name,
-    required this.email,
-    required this.password,
+    required this.description,
+    required this.image,
     required this.promo_id,
-    required this.role,
     required this.created_at,
     required this.updated_at,
   });
@@ -27,23 +21,20 @@ class UserModel {
   toJson() {
     return {
       'name': name,
-      'email': email,
-      'password': password,
+      'description': description,
+      'image': image,
       'promo_id': promo_id,
-      'role': role,
       'created_at': created_at,
       'updated_at': updated_at,
     };
   }
 
   static fromJson(Map<String, dynamic> data) {
-    return UserModel(
-      id: data['id'],
+    return BriefModel(
       name: data['name'],
-      email: data['email'],
-      password: data['password'],
+      description: data['description'],
+      image: data['image'],
       promo_id: data['promo_id'],
-      role: data['role'],
       created_at: data['created_at'],
       updated_at: data['updated_at'],
     );
